@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+  <title>SlidesCodeHighlighter</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500|Roboto+Mono:400,700">
+  <link rel="stylesheet" href="index.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+  <div class="edit-area">
+    <div class="title-bar">Paste code below</div>
+    <div class="toolbar">
+      <label>
+        Language
+        <div class="select-wrapper">
+          <select id="lang">
+            <option value="--">(auto detect language)</option>
+            <option value="c++">C++</option>
+            <option value="clj">Clojure</option>
+            <option value="css">CSS</option>
+            <option value="dart">Dart</option>
+            <option value="go">Go</option>
+            <option value="html">HTML</option>
+            <option value="java">Java</option>
+            <option value="kotlin">Kotlin</option>
+            <option value="javascript">JavaScript</option>
+            <option value="lisp">Lisp</option>
+            <option value="lua">Lua</option>
+            <option value="perl">Perl</option>
+            <option value="python">Python</option>
+            <option value="ruby">Ruby</option>
+            <option value="rust">Rust</option>
+            <option value="sql">SQL</option>
+            <option value="swift">Swift</option>
+            <option value="xml">XML</option>
+            <option value="yaml">Yaml</option>
+          </select>
+        </div>
+      </label>
+
+      <label>
+        Tab size
+        <div class="select-wrapper">
+          <select id="tab-size">
+            <option value="2">2</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+      </label>
+    </div>
+    <div id="editor"></div>
+    <div class="messages"></div>
+  </div>
+  <div class="output-area">
+    <div class="title-bar">Copy the formatted code below</div>
+    <div class="toolbar">
+      <label>
+        Theme
+        <div class="select-wrapper">
+          <select id="theme">
+            <option value="light">Light</option>
+            <option value="light-alt">Light (alternate)</option>
+            <option value="dark">Dark</option>
+            <option value="dark-alt">Dark (alternate)</option>
+            <option value="design-dark">Dark (design)</option>
+            <option value="io17">#io17</option>
+            <option value="io19">#io19</option>
+            <option value="flutter-interact-19">Flutter Interact 2019</option>
+            <option value="custom">Custom</option>
+          </select>
+        </div>
+      </label>
+
+      <label>
+        Type size
+        <input id="type-size" value="40">
+      </label>
+
+      <label>
+        Selected text (Beta)
+        <div class="select-wrapper">
+          <select id="selection-treatment">
+            <option value="--">Do nothing</option>
+            <option value="focus">Focus</option>
+            <option value="bold">Bold</option>
+            <option value="highlight">Highlight</option>
+          </select>
+        </div>
+      </label>
+    </div>
+    <div id="output"></div>
+    <div class="messages">
+      <div class="message message-info">
+        For best results, copy from Safari with Keynote decks and from Chrome
+        with Google Slides decks.
+      </div>
+      <div class="message message-info message-bgcolor"></div>
+    </div>
+  </div>
+  <div class="custom-theme-area">
+    <div class="title-bar">Custom theme</div>
+    <div class="toolbar">
+      <button class="custom-theme-import-export">Import/export</button>
+    </div>
+    <div class="custom-theme-editor"></div>
+  </div>
+
+  <script src="jquery.min.js"></script>
+  <script src="prettify.js"></script>
+  <script src="prettify-languages.js"></script>
+  <script src="ace.js"></script>
+  <script type="module" src="material-colors.js"></script>
+  <script type="module" src="themes.js"></script>
+  <script type="module" src="index.js"></script>
+
+</body>
+</html>
